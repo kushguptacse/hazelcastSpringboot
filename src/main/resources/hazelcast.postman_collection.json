@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "7e810c8a-c97e-4785-8db6-401e0e427d2f",
+		"name": "hazelcast",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get-map",
+			"protocolProfileBehavior": {
+				"followRedirects": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "image/webp,image/apng,image/*,*/*;q=0.8",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Language",
+						"value": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/read-data?key=hi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"read-data"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "hi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put-map",
+			"protocolProfileBehavior": {
+				"followRedirects": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "image/webp,image/apng,image/*,*/*;q=0.8",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Language",
+						"value": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"key\":\"hi\",\n\t\"value\":\"value\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/write-data"
+			},
+			"response": []
+		},
+		{
+			"name": "getall-map",
+			"protocolProfileBehavior": {
+				"followRedirects": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "image/webp,image/apng,image/*,*/*;q=0.8",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Language",
+						"value": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+						"disabled": true
+					}
+				],
+				"url": "http://localhost:8080/read-all-data"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
