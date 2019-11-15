@@ -13,9 +13,9 @@ public class HazelcastConfiguration {
 	public Config hazelCastConfig() {
 		Config config = new Config();
 		config.setInstanceName("hazelcast-instance")
-				.addMapConfig(new MapConfig().setName("configuration")
+				.addMapConfig(new MapConfig().setName("my-map")
 						.setMaxSizeConfig(new MaxSizeConfig(200, MaxSizeConfig.MaxSizePolicy.FREE_HEAP_SIZE))
-						.setEvictionPolicy(EvictionPolicy.LRU).setTimeToLiveSeconds(-1));
+						.setEvictionPolicy(EvictionPolicy.LRU).setTimeToLiveSeconds(20));
 		return config;
 	}
 }
